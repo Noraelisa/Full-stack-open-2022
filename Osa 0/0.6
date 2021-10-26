@@ -1,0 +1,13 @@
+käyttäjä->selain: Käyttäjä painaa painiketta
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over selain:
+ selain lähettää yhden pyynnön palvelimelle, joka sisältää
+ JSON-muodossa olevan uuden muistiinpanon(content, date)
+end note
+palvelin-->selain: [{content: "test", date: "2021-10-26T18:52:57.501Z"}, ...]
+
+ 
+note over selain: 
+ Selain pysyy samalla sivulla, eikä muita pyyntöjä suoriteta,
+ koska selain ainoastaan renderöi palvelimen lähettämää HTML-koodia DOM-apia hyödyntäen
+end note

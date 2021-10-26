@@ -1,0 +1,26 @@
+käyttäjä->selain: Käyttäjä painaa painiketta
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over selain:
+1. redirectin jälkeen selain lataa /notes sivun uudelleen
+end note
+
+palvelin-->selain: redirect /notes
+
+note over selain:
+2. redirect saa aikaan /notes-sivun uudelleenlatauksen
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin-->selain: HTML-koodi
+
+note over selain:
+3. /notes-sivun uudelleenlataus saa aikaan kolme HTTP-pyyntöä; css-tiedoston, js-koodin ja raakadatan(data.json) lataamisen
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: main.js
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: [{content: "test", date: "2021-10-26T18:09:56.867Z"}, ...]

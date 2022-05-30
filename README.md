@@ -6,4 +6,4 @@
 
 ### Osa 1
 
-- [Kurssitiedot](https://github.com/Noraelisa/fullstack_palautus/tree/main/osa_1/kurssitiedot)
+
